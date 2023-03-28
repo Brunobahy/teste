@@ -1,0 +1,62 @@
+.pagina {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cenario {
+    width: 80%;
+    height: 400px;
+    position: relative;
+}
+
+.bkg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scaleX(-1);
+}
+
+.personagemHitBox{
+    position: absolute;
+    bottom: 10px;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    box-sizing: border-box;
+}
+
+.personagem {
+    width: 100px;
+    clip-path: polygon(0% 30%, 100% 30%,100% 70%, 0% 70% );
+    filter: drop-shadow(-1px 1px 2px black);
+    filter: invert();
+    /* animation: movimento 1s linear infinite; */
+}
+
+.inimigo{
+    width: 50px;
+    position: absolute;
+   /* background-color: blue; */
+}
+
+.carregamento {
+    width: 250px;
+    position: absolute;
+    border: 2px solid black;
+    background: yellow;
+}
+
+@keyframes movimento {
+    0%{
+        transform: translate(-400px, 0px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}

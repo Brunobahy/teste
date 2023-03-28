@@ -1,0 +1,83 @@
+.pagina {
+    background-color: darkblue;
+    padding: 50px;
+    color: #FFF;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.mascara {
+    font-size: 130px;
+    background: linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(76, 45, 253, 1) 100%);
+    padding: 20px;
+    font-weight: 700;
+    box-sizing: border-box;
+    /* abaixo como deixar com a mascara */
+    -webkit-background-clip: text;
+    background-clip: text; 
+    color: transparent;
+}
+
+.semMascara {
+    font-size: 130px;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(76, 45, 253, 1) 100%);
+    font-weight: 700;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.gifMascara {
+    font-size: 130px;
+    padding: 20px;
+    font-weight: 700;
+    box-sizing: border-box;
+    /* abaixo como deixar com a mascara */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: url(/gifNuvem2.gif);
+}
+
+.imagemMascara {
+    font-size: 130px;
+    padding: 20px;
+    font-weight: 700;
+    box-sizing: border-box;
+    /* abaixo como deixar com a mascara */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: url(/background.png);
+}
+
+.textoSobreImagem{
+    font-size: 130px;
+    padding: 20px;
+    font-weight: 700;
+    box-sizing: border-box;
+    /*  abaixo como deixar imagem de fundo com texto sobre */
+    background-image: url(/background2.png);
+    background-size: cover;
+    /* background-size: 100%; */
+    /* abaixo animação legal */
+    text-shadow: 0px 0px 10px black;
+    /* animation: mostraTexto 1s; */
+}
+@keyframes mostraTexto {
+    
+    0%{
+        color: transparent;
+    }
+    100%{
+        color: #FFF;
+    }
+}
+
+.backgroundChangeMouse{
+    font-size: 100px;
+
+}

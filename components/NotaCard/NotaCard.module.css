@@ -1,0 +1,16 @@
+.container{
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+}
+
+.titulo{
+    font-weight: 700 ;
+    font-size: 20px;
+}
+
+.texto{
+    font-size: 16px;
+}

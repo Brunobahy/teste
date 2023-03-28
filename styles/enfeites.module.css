@@ -1,0 +1,91 @@
+.pagina {
+    background-color: darkblue;
+    padding: 50px;
+    color: #FFF;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.mouse {
+    position: absolute;
+    /* border: 2px solid black; */
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    /* transition: all 40ms; */
+    animation: gira infinite 500ms;
+    display: block;
+    cursor: none;
+}
+
+@keyframes gira {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 1px 5px red;
+
+    }
+    25%{
+        transform: rotate(180deg);
+        box-shadow: 1px 1px 5px yellow;
+    }
+
+    50% {
+        transform: rotate(360deg);
+        box-shadow: 1px 1px 5px blue;
+    }
+
+    75%{
+        transform: rotate(540deg);
+        box-shadow: 1px 1px 5px yellow;
+    }
+    100%{
+        transform: rotate(720deg);
+        box-shadow: 1px 1px 5px red;
+    }
+}
+
+.lista{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.item{
+    display: flex;
+    gap: 20px;
+    font-size: 30px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 400ms;
+}
+
+.icone{
+    width: 50px;
+    height: 50px;
+    transition: all 400ms;
+}
+.texto{
+    transition: all 400ms;
+    scale: 0;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+
+.item:hover .texto{
+    border: solid 1px #FFF;
+    padding: 10px;
+    scale: 1;
+    border-radius: 15px;
+}
+
+.item:hover .icone{
+    scale: 0;
+}
+

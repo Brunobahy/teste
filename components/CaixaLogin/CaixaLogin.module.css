@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    height: 70%;
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid gray;
+    backdrop-filter: blur(5px);
+    position: relative;
+    border-radius: 20px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    font-size: 20px;
+    width: 400px;
+}
+
+.fechar{
+    background-color: darkslategrey;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #F2E205;
+    font-weight: 700;
+    border-radius: 0 17px 0 35px;
+    cursor: pointer;
+}
+
+
+.titulo {
+    font-size: 50px;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.box_input {
+    display: flex;
+
+}
+
+.boxRemember{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid gray;
+    width: 80%;
+    padding: 20px 0;
+    color: #FFF;
+    outline: none;
+    font-size: 20px;
+}
+
+.input::placeholder {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.button{
+    width: 80%;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    background: #884614;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 400;
+    box-shadow: 3px 3px 0 3px #6E3910, inset 0px 0px 0 0px #6E3910;
+    transform: translate(0px,0px);
+    transition: all 200ms;
+}
+.button:active{
+    transform: translate(3px, 3px);
+    box-shadow:0px 0px 0 0px #6E3910,inset 3px 3px 0 3px #6E3910;
+    color: gray;
+}
+
+.button:disabled{
+    background: darkslategray;
+    box-shadow: none;
+}
+
+.link{
+    color: #F2E205;
+    text-decoration: none;
+}

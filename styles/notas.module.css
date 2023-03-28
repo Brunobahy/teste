@@ -1,0 +1,41 @@
+.pagina{
+    width: 100%;
+    height: 100vh;
+    /* background-color: beige; */
+    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    border: 2px solid lightgray;
+    box-sizing: border-box;
+}
+
+.containerLateral{
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    border-right: 2px solid lightgray;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.lista{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text{
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.salvar{
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}

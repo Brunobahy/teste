@@ -1,0 +1,61 @@
+
+
+.spanSalvar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    backdrop-filter: blur(4px);
+}
+
+.boxSalvar{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #5c5c5c;
+    border-radius: 5px;
+    padding: 50px;
+    position: relative;
+    justify-content: center;
+    background-color: #1E3250;
+    gap: 10px;
+    font-size: 30px;
+}
+
+.salvarTitulo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFF;
+}
+
+.salvarInput{
+    background: none;
+    color: #FFF;
+    border: none;
+    font-size: 20px;
+    border-bottom: 1px solid #FFF;
+    outline: none;
+}
+
+.fechar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius:  0 5px 0 0 ;
+    cursor: pointer;
+}
+.confirmar{
+    position: absolute;
+    width: 50px;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 0 5px 0;
+    cursor: pointer;
+    border: none;
+}
