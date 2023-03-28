@@ -12,7 +12,7 @@ export default function notas() {
   const [notaAtual, setNotaAtual] = useState({})
 
   function editar(id) {
-    if(notaAtual.id === id){
+    if (notaAtual.id === id) {
       setNotaAtual('')
     }
     setNotaAtual(notasLista.find(nota => nota.id === id))
@@ -28,8 +28,8 @@ export default function notas() {
         </ul>
       </aside>
       <div>
-        <AiFillSave onClick={() => {setSalvar(true), setNotaAtual({ ...notaAtual, id: uuidv4() })}} className={styles.salvar} />
-        <textarea className={styles.text} name="" value={notaAtual.texto} onChange={(event) => setNotaAtual({ texto: event.target.value })} id="" cols="30" rows="10"></textarea>
+        <AiFillSave onClick={() => setSalvar(true)} className={styles.salvar} />
+        <textarea className={styles.text} name="" value={notaAtual.texto} onChange={(event) => setNotaAtual({ ...notaAtual, texto: event.target.value })} id="" cols="30" rows="10"></textarea>
       </div>
       {salvar && <SpanSalvar setSalvar={setSalvar} notasLista={notasLista} setNotasLista={setNotasLista} notaAtual={notaAtual} setNotaAtual={setNotaAtual} />}
     </main>
