@@ -1,3 +1,4 @@
+import { NotasProvider } from '@/common/NotasContext'
 import { UsuarioProvider } from '@/common/UsuarioContext'
 import MovimentosProvider from '@/components/movimentos'
 import '@/styles/globals.css'
@@ -13,9 +14,11 @@ export default function App({ Component, pageProps }) {
       </Head>
       <AnimatePresence>
         <UsuarioProvider>
-          <MovimentosProvider>
-            <Component {...pageProps} />
-          </MovimentosProvider>
+          <NotasProvider>
+            <MovimentosProvider>
+              <Component {...pageProps} />
+            </MovimentosProvider>
+          </NotasProvider>
         </UsuarioProvider>
       </AnimatePresence>
     </>

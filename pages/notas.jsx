@@ -1,37 +1,37 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../styles/notas.module.css'
-import { AiFillSave } from 'react-icons/ai'
+import { AiFillSave, AiOutlineCloudUpload } from 'react-icons/ai'
 import NotaCard from '@/components/NotaCard'
-import SpanSalvar from '@/components/SpanSalvar'
-import { v4 as uuidv4 } from 'uuid';
+import CampoCard from '@/components/CampoCard'
+import { useNotasContext } from '@/common/NotasContext';
 
 export default function notas() {
 
-  const [salvar, setSalvar] = useState(false)
-  const [notasLista, setNotasLista] = useState([])
-  const [notaAtual, setNotaAtual] = useState({})
+  const { salvar, upLoad, notasLista, setNotasLista } = useNotasContext()
 
-  function editar(id) {
-    if (notaAtual.id === id) {
-      setNotaAtual('')
-    }
-    setNotaAtual(notasLista.find(nota => nota.id === id))
-  }
+  useEffect(() => {
+    setNotasLista(JSON.parse(localStorage.getItem('notas')))
+  }, [])
 
   return (
+
     <main className={styles.pagina}>
       <aside className={styles.containerLateral}>
         <ul className={styles.lista}>
+
           {notasLista.length > 0 && notasLista.map((notaItem, index) =>
-            <NotaCard key={index} {...notaItem} click={editar} index={index} />
+            <NotaCard key={index} {...notaItem} index={index} />
           )}
+
         </ul>
+        <AiOutlineCloudUpload onClick={() => upLoad()} className={styles.upload} />
       </aside>
+
       <div>
-        <AiFillSave onClick={() => setSalvar(true)} className={styles.salvar} />
-        <textarea className={styles.text} name="" value={notaAtual.texto} onChange={(event) => setNotaAtual({ ...notaAtual, texto: event.target.value })} id="" cols="30" rows="10"></textarea>
+        <AiFillSave onClick={() => salvar()} className={styles.salvar} />
+        <CampoCard />
       </div>
-      {salvar && <SpanSalvar setSalvar={setSalvar} notasLista={notasLista} setNotasLista={setNotasLista} notaAtual={notaAtual} setNotaAtual={setNotaAtual} />}
     </main>
+
   )
 }

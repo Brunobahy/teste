@@ -16,6 +16,7 @@
     border-right: 2px solid lightgray;
     box-sizing: border-box;
     background-color: transparent;
+    position: relative;
 }
 
 .lista{
@@ -24,13 +25,6 @@
     flex-direction: column;
 }
 
-.text{
-    padding: 10px;
-    resize: none;
-    outline: none;
-    border: none;
-    background-color: transparent;
-}
 
 .salvar{
     font-size: 30px;
@@ -38,4 +32,12 @@
     right: 10px;
     bottom: 10px;
     cursor: pointer;
+}
+
+.upload{
+    font-size: 40px;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    right: 10px;
 }
