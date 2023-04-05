@@ -1,3 +1,4 @@
+import { CalculadoraProvider } from '@/common/CalculadoraContext'
 import { NotasProvider } from '@/common/NotasContext'
 import { UsuarioProvider } from '@/common/UsuarioContext'
 import MovimentosProvider from '@/components/movimentos'
@@ -14,11 +15,13 @@ export default function App({ Component, pageProps }) {
       </Head>
       <AnimatePresence>
         <UsuarioProvider>
-          <NotasProvider>
-            <MovimentosProvider>
-              <Component {...pageProps} />
-            </MovimentosProvider>
-          </NotasProvider>
+          <CalculadoraProvider>
+            <NotasProvider>
+              <MovimentosProvider>
+                <Component {...pageProps} />
+              </MovimentosProvider>
+            </NotasProvider>
+          </CalculadoraProvider>
         </UsuarioProvider>
       </AnimatePresence>
     </>

@@ -10,6 +10,7 @@ export default function index() {
         <Link href="enfeites" >Enfeites</Link>
         <Link href="login" >Login</Link>
         <Link href="notas" >Notas</Link>
+        <Link href="calculadora" >Calculadora</Link>
       </div>
     </main>
   )
