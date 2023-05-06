@@ -1,0 +1,27 @@
+
+.container__calculadora {
+    position: absolute;
+    z-index: 10;
+    background-color: #767A99;
+    width: 200px;
+    box-shadow: 0px 0px 10px;
+}
+
+.movimenta, .fecha{
+    position: absolute;
+    top: 0;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+}
+.movimenta{
+    left: 0;
+    cursor: move;
+}
+
+.fecha{
+    right: 0;
+    cursor: pointer;
+}

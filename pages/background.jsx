@@ -8,8 +8,6 @@ export default function background() {
 
     useEffect(() => {
         window.addEventListener('mousemove', (event) => {
-           
-            console.log( event.x)
             setCor(event.x)
         })
 

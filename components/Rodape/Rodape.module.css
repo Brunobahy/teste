@@ -1,0 +1,12 @@
+.rodape{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-shadow: 0px 0px 5px black;
+    box-sizing: border-box;
+}

@@ -20,6 +20,10 @@
     border-bottom: 2px solid lightgray;
     outline: none;
 }
+.input::placeholder{
+    color: gray;
+
+}
 
 .text {
     padding: 10px;

@@ -3,7 +3,7 @@
     gap: 10px;
     display: flex;
     flex-direction: column;
-    background-color: #F6F6F6;
+    background: lightgray;
     position: relative;
 }
 
@@ -14,6 +14,11 @@
 
 .texto {
     font-size: 16px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    width: 90%;
 }
 
 .icone {
@@ -21,15 +26,13 @@
     right: 5px;
     top: 2px;
     padding: 5px;
-    color: black;
     font-size: 20px;
     text-align: center;
     cursor: pointer;
     border-radius: 20px;
     transition: all 400ms;
     /* box-shadow: inset 10px 10px black; */
-    color: #FFF;
-    filter: drop-shadow(0px 0px 2px black);
+    color: black;
 }
 
 .icone:hover{
